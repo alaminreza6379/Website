@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mr. Al-Amin Reza | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 60px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      z-index: 100;
+      transition: 0.3s;
+    }
+
+    header h1 {
+      font-size: 24px;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, #00ffff, #ff00ff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #00fff5, #ff00ff);
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(20px);
+      border-radius: 30px;
+      padding: 80px 40px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.3);
+      max-width: 800px;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      background: linear-gradient(90deg, #00ffff, #ff00ff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      margin-top: 20px;
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 12px 30px;
+      background: linear-gradient(90deg, #00ffff, #ff00ff);
+      border: none;
+      border-radius: 30px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .project {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 30px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    footer {
+      padding: 40px;
+      text-align: center;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .socials a {
+      color: white;
+      font-size: 20px;
+      margin: 0 10px;
+      transition: 0.3s;
+    }
+
+    .socials a:hover {
+      color: #00ffff;
+      transform: scale(1.2);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mr. Al-Amin Reza</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <div class="hero">
+      <h2>Hi, I'm Mr. Al-Amin Reza</h2>
+      <p>An aspiring engineer passionate about technology, hacking, and modern trends.</p>
+      <button class="btn" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View My Work</button>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="max-width:700px; margin-top:20px; opacity:0.9;">I'm an engineering student with a keen interest in cybersecurity, AI, and software development. I love building creative and futuristic projects using modern technologies and sharing my work with the world.</p>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>AI Assistant</h3>
+        <p>An intelligent chatbot powered by OpenAI and Python.</p>
+      </div>
+      <div class="project">
+        <h3>Smart Portfolio</h3>
+        <p>A personal website with glassmorphism, gradients, and animations.</p>
+      </div>
+      <div class="project">
+        <h3>Cyber Defense System</h3>
+        <p>A tool to analyze and detect vulnerabilities in networks.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p style="margin:20px 0;">Let's connect and collaborate!</p>
+    <div class="socials">
+      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:example@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Mr. Al-Amin Reza | All rights reserved.</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(sec => {
+      sec.classList.add('hidden');
+      observer.observe(sec);
+    });
+
+    const css = document.createElement('style');
+    css.innerHTML = `
+      .hidden { opacity: 0; transform: translateY(40px); transition: all 1s ease; }
+      .show { opacity: 1; transform: translateY(0); }
+    `;
+    document.head.appendChild(css);
+  </script>
+</body>
+</html>
